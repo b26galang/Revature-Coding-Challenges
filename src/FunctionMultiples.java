@@ -1,19 +1,16 @@
-import java.util.Arrays;
-import java.util.Scanner;
+//  Create a function that takes two numbers as arguments (num, length) and returns an array of multiples of num until the array length reaches length.
 
 public class FunctionMultiples {
     public static void main(String[] args) {
-
-//      Create a function that takes two numbers as arguments (num, length) and returns an array of multiples of num until the array length reaches length.
-        Scanner sc = new Scanner(System.in);
-        int num = sc.nextInt();
-        int[] multiples = new int[sc.nextInt()];
-
-        for(int i = 0; i < multiples.length; i++) {
+        arrayOfMultiples(7,5);
+        arrayOfMultiples(12,10);
+        arrayOfMultiples(17,6);
+    }
+    public static int[] arrayOfMultiples(int num, int length) {
+        int [] multiples = new int[length];
+        for(int i = 0; i < length; i++) {
             multiples[i] = num * (i + 1);
         }
-
-        System.out.println(Arrays.toString(multiples));
-
+        return multiples;
     }
 }
